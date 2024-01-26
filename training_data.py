@@ -1,5 +1,4 @@
 import asyncio
-import json
 
 import aiohttp
 
@@ -9,9 +8,12 @@ async def main():
     async with aiohttp.ClientSession() as session:
         understat = Understat(session)
 
-        starting_xi = await understat.get_match_players("18579")
+        players = await understat.get_league_players(
+            "epl",
+            2023
+        )
 
-        print(starting_xi)
+        print(players)
 
 loop = asyncio.get_event_loop()
 loop.run_until_complete(main())

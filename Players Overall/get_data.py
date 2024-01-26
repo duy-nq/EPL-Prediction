@@ -3,15 +3,15 @@ import re
 import csv
 
 version = [
-    '/fifa16_73',
-    '/fifa17_173',
-    '/fifa18_278',
-    '/fifa19_353',
-    '/fifa20_419',
-    '/fifa21_486',
-    '/fifa22_555',
-    '/fifa23_589',
-    ''
+    '/fifa16_34',
+    '/fifa17_97',
+    '/fifa18_200',
+    '/fifa19_302',
+    '/fifa20_373',
+    '/fifa21_438',
+    '/fifa22_509',
+    '/fifa23_563',
+    '/fifa24_599'
 ]
 position = {
     'GK': 'GK',
@@ -90,7 +90,7 @@ def get_data():
     clubs = []
 
     for i in range(29):
-        link = pre_link + version[7] + page + str(i+1) + last
+        link = pre_link + version[8] + page + str(i+1) + last
 
         req = request.Request(
             url=link,
@@ -116,7 +116,7 @@ def get_data():
 
 def main():
     data = get_data()
-    export_to_csv('players_2324', data)
+    export_to_csv('players_2324.csv', data)
 
 if __name__ == '__main__':
     main()
