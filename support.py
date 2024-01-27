@@ -1,4 +1,9 @@
 import csv
+from fuzzywuzzy import fuzz
+
+def match_strings(str1, str2, threshold=90):
+    similarity_ratio = fuzz.ratio(str1.lower(), str2.lower())
+    return similarity_ratio >= threshold
 
 def export_to_csv(file_name: str, cols_name: list[str] , data):
         """
@@ -14,6 +19,23 @@ def export_to_csv(file_name: str, cols_name: list[str] , data):
             writer.writerow(cols_name)
 
             writer.writerows(data)
+
+def read_csv(filename: str) -> list:
+    """
+    Return data from .csv file
+    """
+
+    assert filename != "", "File name is empty!"
+    
+    file = open(filename, 'r', encoding='utf-8')
+
+    csv_reader = csv.reader(file)
+    
+    next(csv_reader)
+
+    data = [row for row in csv_reader]
+
+    return data
 
 def calc_team_strength(match_id: str) -> tuple[float, float]:
     """

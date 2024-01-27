@@ -10,7 +10,7 @@ async def main():
 
         players = await understat.get_league_players(
             "epl",
-            2023
+            2014
         )
 
         print(players)
