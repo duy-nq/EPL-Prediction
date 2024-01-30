@@ -35,34 +35,54 @@ def read_csv(filename: str) -> list:
 
     data = [row for row in csv_reader]
 
-    return data
+    return data 
 
 def calc_team_strength(match_id: str) -> tuple[float, float]:
     """
     Returns an estimate of the strength of the home and away teams
     """
 
-    h_str = 0
-    a_str = 0
+    players = read_csv('Players Overall/players_overall_1516_2223.csv')
+    only_players_id = [player[0] for player in players]
 
-    # Add your code here...
+    matches = read_csv('final_results/01.csv')
+    only_matches_id = [match[0] for match in matches]
 
-    return (h_str, a_str)
+    #[6:17] [17:] via data in final results
+    h_ovr = []
+    a_ovr = []
 
-def last_5_matches(team_id: str) -> int:
+    match_index = only_matches_id.index(match_id)
+    h_players = matches[match_index][6:17]
+    a_players = matches[match_index][17:]
+
+    date = str(matches[match_index][1])[:11]
+
+    year = date[:4]
+    season_col = 0
+
+    if int(date[5:7]) <= 6:
+        season_col = int(year)-2014
+    else:
+        season_col = int(year)-2013
+
+    for player in h_players:
+        player_index = only_players_id.index(player)
+        h_ovr.append(int(players[player_index][season_col]))
+
+    for player in a_players:
+        player_index = only_players_id.index(player)
+        a_ovr.append(int(players[player_index][season_col]))
+
+    print(h_ovr, a_ovr)
+
+    return (sum(h_ovr), sum(a_ovr))
+
+def last_5_matches_at(team_id: str, at_home: bool, date: str) -> int:
     """
-    Return team's form in last 5 matches
-    """
+    Return the team's average points (home/away) in last 5 matches
 
-    points = 0
-
-    # Add your code here...
-
-    return points
-
-def last_5_matches_at(team_id: str, at_home: bool) -> int:
-    """
-    Return the team performance (home/away) in last 5 matches
+    date: '2015-12-28'
     """
 
     points = 0
@@ -71,9 +91,11 @@ def last_5_matches_at(team_id: str, at_home: bool) -> int:
 
     return points
 
-def head_to_head(home_id: str, away_id: str) -> int:
+def head_to_head(home_id: str, away_id: str, date: str) -> int:
     """
     Return some head_to_head result(s) between two teams
+
+    date: '2021-12-24'
     """
 
     # Add your code here
