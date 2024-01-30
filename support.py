@@ -5,20 +5,20 @@ def match_strings(str1, str2, threshold=90):
     similarity_ratio = fuzz.ratio(str1.lower(), str2.lower())
     return similarity_ratio >= threshold
 
-def export_to_csv(file_name: str, cols_name: list[str] , data):
-        """
-        Write data into file with cols_name and custom data
-        """
+# def export_to_csv(file_name: str, cols_name: list[str] , data):
+#         """
+#         Write data into file with cols_name and custom data
+#         """
         
-        assert len(data) != 0, "Your data is empty!"
-        assert len(cols_name) == len(data[0]), "Num of cols_name need to be the same with num of cols in data"
+#         assert len(data) != 0, "Your data is empty!"
+#         assert len(cols_name) == len(data[0]), "Num of cols_name need to be the same with num of cols in data"
 
-        with open(file_name, 'w', newline='', encoding='utf-8') as file:
-            writer = csv.writer(file)
+#         with open(file_name, 'w', newline='', encoding='utf-8') as file:
+#             writer = csv.writer(file)
 
-            writer.writerow(cols_name)
+#             writer.writerow(cols_name)
 
-            writer.writerows(data)
+#             writer.writerows(data)
 
 def read_csv(filename: str) -> list:
     """
@@ -37,17 +37,17 @@ def read_csv(filename: str) -> list:
 
     return data
 
-def calc_team_strength(match_id: str) -> tuple[float, float]:
-    """
-    Returns an estimate of the strength of the home and away teams
-    """
+# def calc_team_strength(match_id: str) -> tuple[float, float]:
+#     """
+#     Returns an estimate of the strength of the home and away teams
+#     """
 
-    h_str = 0
-    a_str = 0
+#     h_str = 0
+#     a_str = 0
 
-    # Add your code here...
+#     # Add your code here...
 
-    return (h_str, a_str)
+#     return (h_str, a_str)
 
 def last_5_matches(team_id: str) -> int:
     """
@@ -60,16 +60,42 @@ def last_5_matches(team_id: str) -> int:
 
     return points
 
-def last_5_matches_at(team_id: str, at_home: bool) -> int:
+def last_5_matches_at(team_id: str, at_home: bool, date:str) -> int:
     """
     Return the team performance (home/away) in last 5 matches
     """
-
-    points = 0
-
-    # Add your code here
-
-    return points
+    temp_list = []
+    data = read_csv('Results/results_1516_2223.csv')
+    for row in data:
+        if row[1]>=date: break
+        if at_home:
+            if(row[2]!=team_id): continue
+            if(row[4]>row[5]):
+                #win
+                temp_list.append(3)
+            elif(row[4]<row[5]):
+                #loss
+                temp_list.append(0)
+                pass
+            elif(row[4]==row[5]):
+                #draw
+                temp_list.append(1)
+        else:
+            if(row[3]!=team_id): continue
+            if(row[4]<row[5]):
+                # win
+                temp_list.append(3)
+            elif(row[4]>row[5]):
+                # loss
+                temp_list.append(0)
+            elif(row[4]==row[5]):
+                #draw
+                temp_list.append(1)
+        
+        if len(temp_list)==6:
+            temp_list.pop(0)
+    if len(temp_list)==0: return 0
+    return sum(temp_list)/len(temp_list)
 
 def head_to_head(home_id: str, away_id: str) -> int:
     """
