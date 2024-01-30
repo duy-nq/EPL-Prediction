@@ -78,7 +78,7 @@ def calc_team_strength(match_id: str) -> tuple[float, float]:
 
     return (sum(h_ovr), sum(a_ovr))
 
-def last_5_matches_at(team_id: str, at_home: bool, date: str) -> int:
+def last_5_matches_at(team_id: str, at_home: bool, date: str) -> float:
     """
     Return the team's average points (home/away) in last 5 matches
 
@@ -91,13 +91,38 @@ def last_5_matches_at(team_id: str, at_home: bool, date: str) -> int:
 
     return points
 
-def head_to_head(home_id: str, away_id: str, date: str) -> int:
+def head_to_head(home_id: str, away_id: str, date: str) -> float:
     """
-    Return some head_to_head result(s) between two teams
+    Return some head_to_head result(s) (average points) between two teams
 
     date: '2021-12-24'
     """
 
-    # Add your code here
+    pattern = [[home_id, away_id], [away_id, home_id]]
 
-    return 0
+    points = 0
+    versus = 0
+
+    matches = read_csv('Results/results_1516_2223.csv')
+    
+    for match in matches[::-1]:
+        if match[2:4] in pattern and match[1][:10] < date:
+            versus += 1
+            print(match[4], match[5])
+            
+            if match[4] == match[5]:
+                points += 1
+                continue
+            if match[2:4] == pattern[0] and match[4] > match[5]:
+                points += 3
+            elif match[2:4] == pattern[1] and match[4] < match[5]:
+                points += 3
+
+        if (versus == 5):
+            break    
+
+    print(points, versus)
+
+    return points/versus
+
+print(head_to_head('83', '244', '2024-12-10'))
