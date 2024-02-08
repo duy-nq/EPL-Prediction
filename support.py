@@ -78,18 +78,42 @@ def calc_team_strength(match_id: str) -> tuple[float, float]:
 
     return (sum(h_ovr), sum(a_ovr))
 
-def last_5_matches_at(team_id: str, at_home: bool, date: str) -> float:
+def last_5_matches_at(team_id: str, at_home: bool, date:str) -> int:
     """
-    Return the team's average points (home/away) in last 5 matches
-
-    date: '2015-12-28'
+    Return the team performance (home/away) in last 5 matches
     """
-
-    points = 0
-
-    # Add your code here
-
-    return points
+    temp_list = []
+    data = read_csv('Results/results_1516_2223.csv')
+    for row in data:
+        if row[1]>=date: break
+        if at_home:
+            if(row[2]!=team_id): continue
+            if(row[4]>row[5]):
+                #win
+                temp_list.append(3)
+            elif(row[4]<row[5]):
+                #loss
+                temp_list.append(0)
+                pass
+            elif(row[4]==row[5]):
+                #draw
+                temp_list.append(1)
+        else:
+            if(row[3]!=team_id): continue
+            if(row[4]<row[5]):
+                # win
+                temp_list.append(3)
+            elif(row[4]>row[5]):
+                # loss
+                temp_list.append(0)
+            elif(row[4]==row[5]):
+                #draw
+                temp_list.append(1)
+        
+        if len(temp_list)==6:
+            temp_list.pop(0)
+    if len(temp_list)==0: return 0
+    return sum(temp_list)/len(temp_list)
 
 def head_to_head(home_id: str, away_id: str, date: str) -> float:
     """
@@ -108,7 +132,6 @@ def head_to_head(home_id: str, away_id: str, date: str) -> float:
     for match in matches[::-1]:
         if match[2:4] in pattern and match[1][:10] < date:
             versus += 1
-            print(match[4], match[5])
             
             if match[4] == match[5]:
                 points += 1
@@ -121,8 +144,4 @@ def head_to_head(home_id: str, away_id: str, date: str) -> float:
         if (versus == 5):
             break    
 
-    print(points, versus)
-
     return points/versus
-
-print(head_to_head('83', '244', '2024-12-10'))
