@@ -37,12 +37,20 @@ def read_csv(filename: str) -> list:
 
     return data 
 
+def remove_zero(ovr: list[int]):
+    if 0 not in ovr:
+        return ovr
+    else:
+        for i in range(len(ovr)):
+            if ovr[i] == 0:
+                ovr[i] = max(ovr)-3
+
 def calc_team_strength(match_id: str) -> tuple[float, float]:
     """
     Returns an estimate of the strength of the home and away teams
     """
 
-    players = read_csv('Players Overall/players_overall_1516_2223.csv')
+    players = read_csv('Players Overall/players_overall_1516_2223_update.csv')
     only_players_id = [player[0] for player in players]
 
     matches = read_csv('final_results/01.csv')
@@ -68,15 +76,22 @@ def calc_team_strength(match_id: str) -> tuple[float, float]:
 
     for player in h_players:
         player_index = only_players_id.index(player)
-        h_ovr.append(int(players[player_index][season_col]))
+        try:
+            h_ovr.append(int(players[player_index][season_col]))
+        except:
+            h_ovr.append(0)
 
     for player in a_players:
         player_index = only_players_id.index(player)
-        a_ovr.append(int(players[player_index][season_col]))
+        try:
+            a_ovr.append(int(players[player_index][season_col])) 
+        except:
+            a_ovr.append(0)
 
-    print(h_ovr, a_ovr)
+    remove_zero(h_ovr)
+    remove_zero(a_ovr)     
 
-    return (sum(h_ovr), sum(a_ovr))
+    return (round(sum(h_ovr)/11,1), round(sum(a_ovr)/11,1))
 
 def last_5_matches_at(team_id: str, at_home: bool, date:str) -> int:
     """
@@ -143,5 +158,8 @@ def head_to_head(home_id: str, away_id: str, date: str) -> float:
 
         if (versus == 5):
             break    
+
+    if versus == 0:
+        return 0
 
     return points/versus
