@@ -1,5 +1,5 @@
 import pandas as pd
-
+#15 means 14-15
 # Đọc dữ liệu từ file CSV
 file_path = "players_overall_1516_2223.csv"
 df = pd.read_csv(file_path)

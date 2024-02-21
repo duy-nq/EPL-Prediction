@@ -7,12 +7,12 @@ id,name,1516,1617,1718,1819,1920,2021,2122,2223
 7152,Björn Engels,0,0,0,0,76,74,0,0
 6859,Kortney Hause,0,0,0,67,68,72,75,75
 6665,Curtis Jones,0,0,0,61,62,68,75,76
-6352,Valentino Lazaro,0,0,0,0,0,0,0,0
+6352,Valentino Lazaro,69,71,72,73,75,79,77,75
 4476,Callum Robinson,0,0,0,0,73,72,0,0
-7726,Ezri Konsa Ngoyo,0,0,0,0,0,0,0,0
+7726,Ezri Konsa Ngoyo,50,50,59,62,69,70,74,78
 2203,Emiliano Buendía,0,0,0,0,76,0,79,80
 209,Josip Drmic,0,0,0,0,75,0,0,0
-12,Mario Vrancic,0,0,0,0,0,0,0,0
+12,Mario Vrancic,69,71,73,72,72,73,72,72
 8016,Matthew Longstaff,0,0,0,0,65,72,0,67
 7711,David McGoldrick,0,0,0,0,72,74,0,0
 7707,Enda Stevens,0,0,0,0,76,78,0,0
@@ -24,12 +24,12 @@ id,name,1516,1617,1718,1819,1920,2021,2122,2223
 7822,Dennis Srbeny,0,0,0,0,68,0,0,0
 8075,Brandon Williams,0,0,0,0,66,75,74,73
 8089,Kieran Tierney,0,0,0,0,77,78,80,81
-5087,Roberto Jiménez,0,0,0,0,0,0,0,0
+5087,Roberto Jiménez,78,80,79,78,77,76,75,74
 4764,Jean-Philippe Gbamin,0,0,0,0,79,77,76,75
 4475,Jed Steer,0,0,0,0,70,70,72,71
 3358,Ibrahim Amadou,0,0,0,0,76,0,0,0
 3357,Djibril Sidibe,0,0,0,0,77,0,0,0
-3253,Frederic Guilbert,0,0,0,0,0,0,0,0
+3253,Frederic Guilbert,68,69,72,74,76,76,76,76
 2673,Albian Ajeti,0,0,0,0,74,0,0,0
 2509,Dimitri Foulquier,0,0,0,0,74,0,0,0
 2446,Dani Ceballos,0,0,0,0,81,79,0,0
@@ -37,15 +37,15 @@ id,name,1516,1617,1718,1819,1920,2021,2122,2223
 2132,Jota,0,0,0,0,73,0,0,0
 1883,Ravel Morrison,0,0,0,0,74,0,0,0
 1545,Emil Krafth,0,0,0,0,73,74,73,74
-1374,José Reina,0,0,0,0,0,0,0,0
+1374,José Reina,81,80,83,83,83,81,79,78
 1217,Moritz Leitner,0,0,0,0,73,0,0,0
 330,Ralf Fährmann,0,0,0,0,79,0,0,0
 250,Ørjan Nyland,0,0,0,0,72,0,0,0
 62,Lukas Rupp,0,0,0,0,0,0,73,0
 8291,Daniel Podence,0,0,0,0,0,78,78,78
-8287,Mbwana Samatta,0,0,0,0,0,0,0,0
+8287,Mbwana Samatta,66,69,73,73,76,78,75,74
 8285,Sander Berge,0,0,0,0,0,79,0,0
-5962,Tanguy NDombele Alvaro,0,0,0,0,0,0,0,0
+5962,Tanguy NDombele Alvaro,50,50,51,75,80,81,80,81
 4918,Patrick Cutrone,0,0,0,0,77,0,0,72
 2335,Pablo Fornals,0,0,0,0,80,79,79,79
 1304,Moise Kean,0,0,0,0,75,0,0,0
@@ -58,7 +58,7 @@ id,name,1516,1617,1718,1819,1920,2021,2122,2223
 7582,Mark Travers,0,0,0,0,65,0,0,73
 7546,Harvey Elliott,0,0,0,0,0,0,73,73
 7490,Mason Greenwood,0,0,0,65,70,77,79,0
-7487,Aaron Rowe,0,0,0,0,0,0,0,0
+7487,Aaron Rowe,0,0,0,0,58,58,58,62
 7459,Will Norris,0,0,0,66,0,65,65,0
 7458,Matty Daly,0,0,0,59,0,0,0,0
 7439,Tahith Chong,0,0,0,65,65,0,0,70
@@ -66,17 +66,17 @@ id,name,1516,1617,1718,1819,1920,2021,2122,2223
 7437,Demeaco Duhaney,0,0,60,61,0,0,0,0
 7420,Miguel Almirón,0,0,0,0,79,78,76,78
 7384,Chris Mepham,0,0,0,0,74,0,0,71
-7340,Rhys Healey,0,0,0,0,0,0,0,0
+7340,Rhys Healey,60,61,62,62,62,63,64,69
 7335,Callum Slattery,0,0,0,60,62,60,0,0
 7332,Max Kilman,0,0,0,0,63,67,73,77
 7326,Kayne Ramsay,0,0,0,0,61,62,0,63
 7768,Mason Mount,0,0,0,0,77,80,83,84
-5234,Jesús Vallejo,0,0,0,0,0,0,0,0
+5234,Jesús Vallejo,62,74,75,78,77,76,76,75
 7695,Todd Cantwell,0,0,0,0,72,0,75,0
-5656,Nicolas Pepe,0,0,0,0,0,0,0,0
+5656,Nicolas Pepe,56,0,67,72,76,83,80,79
 87,Joelinton,0,0,0,0,78,75,74,75
 8300,Steven Bergwijn,0,0,0,0,0,82,80,0
-8288,Tomas Soucek,0,0,0,0,0,0,0,0
+8288,Tomas Soucek,0,0,70,70,76,80,81,82
 7991,Aaron Connolly,0,0,55,62,65,70,70,0
 7752,Gabriel Martinelli,0,0,0,0,72,74,76,78
 7723,John McGinn,0,0,0,0,77,77,78,79
@@ -95,9 +95,9 @@ id,name,1516,1617,1718,1819,1920,2021,2122,2223
 7708,John Lundstram,0,0,0,0,70,75,0,0
 7698,Leandro Trossard,0,0,0,0,79,78,78,79
 5675,Ismaila Sarr,0,0,0,0,78,0,77,0
-7722,Trézéguet,0,0,0,0,0,0,0,0
+7722,Trézéguet,62,67,69,71,77,77,75,75
 7322,Bukayo Saka,0,0,0,0,69,76,80,82
-5240,Ondrej Duda,0,0,0,0,0,0,0,0
+5240,Ondrej Duda,66,71,73,73,75,76,75,75
 5567,Nathan Holland,0,0,60,62,61,64,0,0
 8718,Stuart Dallas,0,0,0,0,0,74,75,75
 3294,Edinson Cavani,0,0,0,0,0,84,84,0
@@ -111,11 +111,11 @@ id,name,1516,1617,1718,1819,1920,2021,2122,2223
 8720,Jack Harrison,0,0,0,0,0,74,77,77
 8493,Jake Vokins,0,0,0,0,57,63,0,63
 8476,Jarrad Branthwaite,0,0,0,0,0,63,66,0
-8472,Richairo Zivkovic,0,0,0,0,0,0,0,0
+8472,Richairo Zivkovic,69,69,70,70,69,68,67,66
 8456,Nathan Tella,0,0,0,0,0,62,66,67
-8455,Josh Martin,0,0,0,0,0,0,0,0
+8455,Josh Martin,0,52,53,53,52,0,0,0
 8384,Armando Broja,0,0,0,0,0,0,70,75
-8383,Faustino Anjorin,0,0,0,0,0,0,0,0
+8383,Faustino Anjorin,0,0,0,0,0,58,59,64
 8380,Pablo Marí,0,0,0,0,0,75,75,75
 8379,Alexis Mac Allister,0,0,0,0,0,75,75,76
 8323,Josh Brownhill,0,0,0,0,0,73,76,0
@@ -125,18 +125,18 @@ id,name,1516,1617,1718,1819,1920,2021,2122,2223
 65,Timo Werner,0,0,0,0,0,85,84,0
 3585,Said Benrahma,0,0,0,0,0,77,78,78
 2517,Martin Odegaard,0,0,0,0,0,0,82,84
-2361,Willian José,0,0,0,0,0,0,0,0
+2361,Willian José,69,71,78,82,82,82,80,78
 2163,Diego Llorente,0,0,0,0,0,76,78,76
-229,Thiago Alcántara,0,0,0,0,0,0,0,0
+229,Thiago Alcántara,81,83,84,88,86,86,85,86
 9205,Jayden Bogle,0,0,0,0,0,73,0,0
 9040,Conor Gallagher,0,0,0,0,0,71,77,79
 8992,Hakim Ziyech,0,0,0,0,0,85,0,83
 8722,Ezgjan Alioski,0,0,0,0,0,72,0,0
 6157,Timothy Castagne,0,0,0,0,0,77,79,78
-5613,Gabriel,0,0,0,0,0,0,0,0
+5613,Gabriel,71,74,74,74,74,75,76,75
 4490,Semi Ajayi,0,0,0,0,0,73,0,0
 3288,Thiago Silva,0,0,0,0,0,85,85,86
-9290,Mbaye Diagne,0,0,0,0,0,0,0,0
+9290,Mbaye Diagne,62,0,0,68,74,77,74,74
 5587,Josh Maja,0,60,0,0,0,0,0,0
 8778,Fabio Silva,0,0,0,0,0,69,70,0
 8706,Eberechi Eze,0,0,0,0,0,75,77,76
@@ -147,14 +147,14 @@ id,name,1516,1617,1718,1819,1920,2021,2122,2223
 8286,Jack Robinson,0,0,0,0,0,70,0,0
 8272,João Pedro,0,0,0,0,0,0,71,0
 8257,Gedson Fernandes,0,0,0,0,0,75,0,0
-8254,Indiana Vassilev,0,0,0,0,0,0,0,0
+8254,Indiana Vassilev,0,0,0,0,0,60,62,62
 7753,James Justin,0,0,0,0,69,74,77,76
 7727,Henri Lansbury,0,0,0,0,70,69,0,0
 7725,Jonathan Kodjia,0,0,0,0,73,0,0,0
 7715,Simon Moore,0,0,0,0,67,67,0,0
 7714,Ben Osborn,0,0,0,0,72,74,0,0
 7713,Luke Freeman,0,0,0,0,73,0,0,0
-7705,Jack O'Connell,0,0,0,0,0,0,0,0
+7705,Jack O'Connell,61,63,64,67,73,75,78,75
 7704,Chris Basham,0,0,0,0,73,77,0,0
 7702,Dean Henderson,0,0,0,0,75,80,80,79
 7694,Marco Stiepermann,0,0,0,0,73,0,0,0
@@ -165,7 +165,7 @@ id,name,1516,1617,1718,1819,1920,2021,2122,2223
 7602,Kelland Watts,0,0,0,56,0,0,0,67
 7382,Dan Burn,0,0,0,0,73,75,75,77
 7230,Emile Smith-Rowe,0,0,0,64,65,69,78,80
-6997,Ignacio Pussetto,0,0,0,0,0,0,0,0
+6997,Ignacio Pussetto,60,58,66,69,74,76,74,74
 6336,Bruno Jordao,0,0,0,0,61,0,62,62
 5681,Giovani Lo Celso,0,0,0,0,83,82,80,81
 5603,Aaron Ramsdale,0,0,61,62,72,75,78,82
@@ -203,7 +203,7 @@ id,name,1516,1617,1718,1819,1920,2021,2122,2223
 6756,Dwight McNeil,0,0,0,64,76,78,77,76
 6722,Konstantinos Mavropanos,0,0,0,68,70,0,0,0
 6681,Harvey Barnes,0,56,0,0,75,80,80,80
-6657,Lasse Sorenson,0,0,0,0,0,0,0,0
+6657,Lasse Sorenson,0,0,0,62,63,63,63,63
 6630,Joe Willock,0,0,0,0,0,0,75,75
 6561,Tyrese Campbell,0,0,61,0,0,0,0,0
 6544,Lukas Nmecha,0,0,60,0,0,0,0,0
